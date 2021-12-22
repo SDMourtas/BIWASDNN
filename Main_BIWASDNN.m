@@ -23,7 +23,7 @@ clc
 % Choose modeling problem (for x = 1 to 3)
 x=1;
 % Choose method: BIWASD (y = 1), HPNN_WASD (y = 2), Fine Tree (y==3),
-%                Squared Exp. GPR (y==4), Ensemble Bagged Trees (y==5)
+%                Squared Exp. GPR (y==4)
 y=1;
 
 [X_train,Y_train,X_test,Y_test,p,d,delta,n,tmax]=problem(x);
@@ -47,10 +47,6 @@ toc
 elseif y==4
 tic
 trainedModel=SEGPR([X_train,Y_train]);
-toc
-elseif y==5
-tic
-trainedModel=EBT([X_train,Y_train]);
 toc
 end
 
