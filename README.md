@@ -19,6 +19,10 @@ The main articles used are the followings:
 *	Qmatrix2.m: function for calculating the matrix Q
 *	predictN.m: function for predicting
 *	error_pred.m: function for calculating the coefficient of determination (R-squared), mean absolute percentage error (MAPE), mean absolute error (MAE) and root-mean-square error (RMSE) of the predicted values
+*	Simulation.m: feedback controller simulation
+*	tf_out.m: PID feedback controller
+*	tf_out_pred.m: NN feedback controller
+*	Problem_figures.m: function for the figures creation
 
 # Installation
 *	Unzip the file you just downloaded and copy the MI-BASWASDN directory to a location,e.g.,/my-directory/
@@ -31,6 +35,7 @@ After running the 'Main_MI_BASWASDN.m file, the package outputs are the followin
 *	The optimal activation function power of each hidden-layer neuron.
 *	The models predictions and statistics on the training and testing samples.
 *	The graphic illustration of the testing and predicting performance.
+*	The graphic illustration of the feedback signal.
 
 # Environment
 The BIWASDNN kit has been tested in Matlab 2021a on OS: Windows 10 64-bit.
