@@ -23,7 +23,7 @@ clc
 % Choose modeling problem (for x = 1 to 3)
 x=1;
 % Choose method: BIWASD (y = 1), HPNN_WASD (y = 2), Fine Tree (y==3),
-%                Squared Exp. GPR (y==4)
+%                Squared Exp. GPR (y==4), LSTM (y==5), Feedforward (y==6)
 y=1;
 
 [X_train,Y_train,X_test,Y_test,p,d,delta,n,tmax]=problem(x);
@@ -48,6 +48,14 @@ elseif y==4
 tic
 trainedModel=SEGPR([X_train,Y_train]);
 toc
+elseif y==5
+tic
+trainedModel=LSTM(X_train,Y_train);
+toc
+elseif y==6
+tic
+trainedModel=FF(X_train,Y_train);
+toc
 end
 
 %% Predict
@@ -55,9 +63,17 @@ if y<=2
 predt=predictN(X_train,W,N,y);
 pred=predictN(X_test,W,N,y);
 trainedModel=[];
-else
+elseif y>=3 && y<=4
 predt=trainedModel.predictFcn(X_train);
 pred=trainedModel.predictFcn(X_test);
+E=[];Em=[];W=[];N=[];
+elseif y==5
+predt=predict(trainedModel,X_train')';
+pred=predict(trainedModel,X_test')';
+E=[];Em=[];W=[];N=[];
+elseif y==6
+predt=trainedModel(X_train')';
+pred=trainedModel(X_test')';
 E=[];Em=[];W=[];N=[];
 end
 

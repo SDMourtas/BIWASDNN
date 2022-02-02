@@ -27,8 +27,12 @@ for k = 1:t_range
     end
     if y<=2
         u(k)=predictN(er,W,N,y);
-    else
+    elseif y>=3 && y<=4
         u(k)=trainedModel.predictFcn(er);
+    elseif y==5
+        u(k)=predict(trainedModel,er);
+    elseif y==6
+        u(k)=trainedModel(er);
     end
     
     y_out(k)=-den*y_old+num*u_old;
