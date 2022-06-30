@@ -5,7 +5,7 @@ The purpose of this package is to model and replicate the behavior of a PID cont
 Considering this problem's approach through NN, using the weight direct determination (WDD) method and given a maximum number of hidden-layer neurons, the BIWASDNN algorithm finds the optimal number of hidden-layer neurons along with the optimal power of the activation function at each hidden-layer neuron that reduces the model's error during the validation procedure.
 
 The main articles used are the followings:
-*	S.D.Mourtas, V.N.Katsikis, C. Kasimis, "Feedback Control Systems Stabilization Using a Bio-inspired Neural Network," (submitted)
+*	S.D.Mourtas, V.N.Katsikis, C. Kasimis, "Feedback Control Systems Stabilization Using a Bio-inspired Neural Network," EAI Endorsed Trans AI Robotics, vol. 1, 1-13 (2022)
 
 # M-files Description
 *	Main_BIWASDNN.m: the main function
