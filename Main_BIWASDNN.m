@@ -12,8 +12,8 @@
 %                                                                   %
 %   Main paper: S.D.Mourtas, V.N.Katsikis, C. Kasimis,              %
 %               "Feedback Control Systems Stabilization Using a     %
-%               Bio-inspired Neural Network",(submitted)            %
-%                                                                   %
+%               Bio-inspired Neural Network", EAI Endorsed Trans AI %
+%               Robotics, vol. 1, 1-13 (2022)                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear 
