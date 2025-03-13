@@ -4,7 +4,7 @@ R=(XX-YY)./YY; Z=length(R);
 [row,col]=find(isnan(R)); R(row,col)=0;
 [row,col]=find(isinf(R)); R(row,col)=0;
 
-yh=mean(XX); % test
+yh=mean(YY); % test
 SStot=sum((XX-yh).^2);
 SSres=sum((XX-YY).^2);
 R2t=1-SSres/SStot;
