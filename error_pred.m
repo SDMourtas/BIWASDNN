@@ -5,7 +5,7 @@ R=(XX-YY)./YY; Z=length(R);
 [row,col]=find(isinf(R)); R(row,col)=0;
 
 yh=mean(YY); % test
-SStot=sum((XX-yh).^2);
+SStot=sum((YY-yh).^2);
 SSres=sum((XX-YY).^2);
 R2t=1-SSres/SStot;
 fprintf('The train data R-squared is: %f \n',R2t)
@@ -25,8 +25,8 @@ R=(X-Y)./Y; Z=length(R);
 [row,col]=find(isnan(R)); R(row,col)=0;
 [row,col]=find(isinf(R)); R(row,col)=0;
 
-yh=mean(X); % test
-SStot=sum((X-yh).^2);
+yh=mean(Y); % test
+SStot=sum((Y-yh).^2);
 SSres=sum((X-Y).^2);
 R2=1-SSres/SStot;
 fprintf('The test data R-squared is: %f \n',R2)
